@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Introduction & Glossary",
+    "file": "introduction-glossary.md"
+  },
+  {
+    "title": "Basic Usage",
+    "file": "basic-usage.md"
+  },
+  {
+    "title": "Detailed Usage & Examples",
+    "file": "generated/detailed-usage-examples.generated.md"
+  },
+  {
+    "title": "Philosophy, Principles & Architecture",
+    "file": "philosophy.md"
+  },
+  {
+    "title": "Inspiration, Problem, Prior Art",
+    "file": "inspiration-problem-prior-art.md"
+  },
+  {
+    "title": "FAQ, Gotchas & Caveats",
+    "file": "faq-gotchas-caveats.md"
+  },
+  {
+    "title": "Future Roadmap",
+    "file": "future-roadmap.md"
+  }
+]

@@ -1,0 +1,7 @@
+node_modules/
+dist/
+build/
+DRAFT/
+coverage/
+config/
+migrate_data/

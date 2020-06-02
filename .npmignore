@@ -1,0 +1,16 @@
+/node_modules/
+/DRAFT/
+/coverage/
+/scripts/
+/nodemon*.json
+.editorconfig
+.gitignore
+.prettierrc
+.idea/
+jest.config.js
+/docker
+/helm
+/.circleci
+/.dockerignore
+/docker-compose.yml
+/Dockerfile

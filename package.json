@@ -1,0 +1,93 @@
+{
+  "name": "@superawesome/permissions",
+  "version": "1.0.0",
+  "main": "./dist/index.js",
+  "scripts": {
+    "clean": "rimraf coverage dist src/docs/generated tmp yml && mkdir dist",
+    "prebuild": "npm run clean",
+    "dev": "npm-run-all clean build:ts:watch",
+    "build:ts": "tsc -p tsconfig.release.json",
+    "build:ts:watch": "tsc -w -p tsconfig.release.json",
+    "build": "npm run build:all",
+    "build:all": "npm run build:ts && npm run docs:build",
+    "build:all:watch": "npm-run-all --parallel build:ts:watch docs:watch",
+    "docs:build": "npx rimraf dist/docs && npm run jest-docs && npx compodoc",
+    "docs:serve": "npm run docs:build -- -s",
+    "docs:watch": "npx rimraf dist/docs && npm run jest-docs:watch & (sleep 5 && npx compodoc -s -w)",
+    "jest-docs": "mkdir -p src/docs/generated && ts-node src/__tests__/detailed-usage-examples.md.spec.ts > src/docs/generated/detailed-usage-examples.generated.md",
+    "jest-docs:watch": "nodemon --config nodemon.jest-docs.json --exec npm run jest-docs",
+    "test": "NODE_ENV=test jest --coverage",
+    "test:watch": "NODE_ENV=test jest --watchAll",
+    "start": "npm run test:watch",
+    "prettier": "npx prettier --write \"**/*.{ts,js,json}\"",
+    "format": "npm-run-all prettier eslint prettier",
+    "eslint": "npx eslint --fix \"**/*.{js,ts}\"",
+    "eslint-nofail": "npx eslint --fix \"**/*.{js,ts}\" || exit 0",
+    "format-nofail": "npm-run-all prettier eslint-nofail prettier",
+    "lint": "npm run eslint",
+    "lint-nofail": "npm run eslint-nofail"
+  },
+  "dependencies": {
+    "accesscontrol": "^2.2.1",
+    "accesscontrol-re": "^3.1.0",
+    "json-diff": "^0.5.4",
+    "lodash": "^4.17.15"
+  },
+  "devDependencies": {
+    "@compodoc/compodoc": "1.1.10",
+    "@types/jest": "^25.2.3",
+    "@types/lodash": "^4.14.154",
+    "@types/node": "^12.12.43",
+    "@types/test-console": "^1.1.0",
+    "@typescript-eslint/eslint-plugin": "^2.34.0",
+    "@typescript-eslint/parser": "^3.1.0",
+    "eslint": "^7.1.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-airbnb-typescript": "^7.2.1",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jest": "^23.13.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-tsdoc": "^0.2.5",
+    "eslint-plugin-unicorn": "^19.0.1",
+    "esm": "^3.2.25",
+    "husky": "^4.2.5",
+    "jest": "^26.0.1",
+    "jest-extended": "^0.11.5",
+    "jest-simple-dot-reporter": "^1.0.5",
+    "jest-standard-reporter": "^1.0.4",
+    "lint-staged": "^10.2.7",
+    "nodemon": "^2.0.4",
+    "npm-run-all": "^4.1.5",
+    "prettier": "2.0.5",
+    "rimraf": "^3.0.2",
+    "test-console": "^1.1.0",
+    "ts-jest": "^26.1.0",
+    "ts-node": "^8.10.2",
+    "tsutils": "~3.17.1",
+    "type-fest": "^0.15.0",
+    "typescript": "^3.9.3",
+    "upath": "^1.2.0"
+  },
+  "engines": {
+    "node": ">= 8"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "npx prettier --write",
+      "npx eslint --fix",
+      "npx prettier --write"
+    ]
+  },
+  "author": "Angelos Pikoulas",
+  "license": "Apache-2.0",
+  "types": "./dist/"
+}
