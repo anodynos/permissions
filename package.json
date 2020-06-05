@@ -1,6 +1,6 @@
 {
   "name": "@superawesome/permissions",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Fine grained permissions / access control with ownerships & attribute picking, done right.",
   "keywords": [
     "permission",
@@ -36,6 +36,15 @@
     "Attribute based access control",
     "abac"
   ],
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/SuperAwesomeLTD/permissions"
+  },
+  "bugs": "https://github.com/SuperAwesomeLTD/permissions/issues",
+  "homepage": "http://permissions.docs.superawesome.com/",
+  "author": "Angelos Pikoulas",
+  "license": "Apache-2.0",
+  "private": false,
   "main": "./dist/index.js",
   "scripts": {
     "clean": "rimraf coverage dist src/docs/generated tmp yml && mkdir dist",
@@ -122,7 +131,5 @@
       "npx prettier --write"
     ]
   },
-  "author": "Angelos Pikoulas",
-  "license": "Apache-2.0",
   "types": "./dist/"
 }

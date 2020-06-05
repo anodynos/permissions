@@ -32,7 +32,9 @@ _(^^ github needed to show icons ^^)_
  
 ## Contents
 
-The actual generated docs are at `npm run docs:serve` or at [**SuperAwesome Permissions Documentation**](https://permissions.docs.superawesome.com) (they break on github) on the left at CompoDocs Nav Bar:
+The actual generated docs are at `npm run docs:serve` and **coming soon** at [**SuperAwesome Permissions Documentation**](https://permissions.docs.superawesome.com). Go to the left, at the CompoDocs Nav Bar.
+
+**NOTE: THESE LINKS BREAK ON GITHUB! (^^^ read above ^^^)**
 
 - [Introduction & Glossary](additional-documentation/introduction-&-glossary.html)
 
@@ -48,7 +50,7 @@ The actual generated docs are at `npm run docs:serve` or at [**SuperAwesome Perm
 
 - [Future Roadmap](additional-documentation/future-roadmap.html)
 
-**Note**: The native [Nestjs Guard & Decorators are here](https://permissions-nestjs.docs.superawesome.com/)
+**Note**: We also have [native Nestjs Guard & Decorators](https://github.com/SuperAwesomeLTD/permissions-nestjs) empowering an Orthogonal / Aspect Oriented Architecture.
 
 # Versioning
 
