@@ -19,3 +19,4 @@ jest.config.js
 /src
 /.*
 /tsconfig.docs.json
+/additional-documentation/
