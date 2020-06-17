@@ -37,8 +37,8 @@
     "abac"
   ],
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/SuperAwesomeLTD/permissions"
+    "type": "git",
+    "url": "https://github.com/SuperAwesomeLTD/permissions"
   },
   "bugs": "https://github.com/SuperAwesomeLTD/permissions/issues",
   "homepage": "http://permissions.docs.superawesome.com/",

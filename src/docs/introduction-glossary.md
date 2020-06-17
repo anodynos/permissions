@@ -16,21 +16,27 @@ It is meant to be used by Apps such as API backends but also frontends and other
 
 To most people Auth means one thing. But there are two entirely different words and concepts hidden in this acronym: 
 
-**Authentication**, from the Greek word **authentikos** which means "genuine" or "original", is simply proving who you claim to be. In broad terms, you exchange a username & password, or a fingerprint etc for an authenticated user (eg an object, a record, a token etc in the system). In the real world you show your ID/passport to the airport passport control, you're allowed in the country. What you can do in the country, in the Bank etc, its NOT up to **authentication**.     
+**Authentication**, from the Greek word **αυθεντικος / authentikos** which means "genuine" or "original", is simply proving who you claim to be. In broad terms, you exchange a username & password, or a fingerprint etc for an authenticated user (eg an object, a record, a token etc in the system). In the real world you show your ID/passport to the airport passport control, you're allowed in the country. What you can do in the country, in the Bank etc, its NOT up to **authentication**.     
   
-**Authorization**, from the Anglo-French word **authorize**, which basically means permission. This defines what you allowed to do, in each service or facility you use. This is probably the hardest unsolved problem to solve: many major data breaches were due to users having excessive permissions (and NOT authentication).    
-
-You can read more in this neat article about [Authentication VS Authorization](https://www.okta.com/identity-101/authentication-vs-authorization/) or see this slide.
+**Authorization**, from the Anglo-French word **authorize**, which basically means permission (a.k.a Access Control or Client Privileges). This defines what you allowed to do, in each service or facility you use. This is probably the hardest unsolved problem to solve: many major data breaches were due to users having excessive permissions (and NOT authentication).    
 
 ![authentication-vs-authorization](/images/authentication-vs-authorization.png "Authentication VS Authorization")
 
+Read more:
+
+* [Authentication VS Authorization](https://www.okta.com/identity-101/authentication-vs-authorization/).
+
+* [AUTHN & AUTHZ](http://technoponder.com/authentication-authorization/)
+
+* [Distinguishing Authn and Authz](https://dzone.com/articles/distinguishing-authn-and-authz)
+
 ### Authorization is broken
 
-Its easy to get confused with the duality of **Auth**, because OAuth 2.0 claims it solves both aspects and uses both words in its vocabulary, often in a very misleading way.   
+Its easy to get confused with the duality of **Auth**, because OAuth 2.0 claims it solves both aspects and uses both words in its vocabulary, quite  often in a very misleading way.   
 
-SuperAwesome Permissions **does not** attempt to solve **Authentication** at all. That's already solved brilliantly by OAuth 2.0, with various [workflows](https://auth0.com/docs/api-auth/which-oauth-flow-to-use), free & paid server implementations, SaaS platforms, client libraries for backend and frontend etc.    
+SuperAwesome Permissions **does not** attempt to solve **Authentication** at all. That's already solved brilliantly by OAuth 2.0: all the complicated signing & crypto algorithms, the comprehensive [workflows](https://auth0.com/docs/api-auth/which-oauth-flow-to-use), the server implementations(free & paid), SaaS platforms, client libraries for backend and frontend etc are all well-established.    
 
-SuperAwesome Permissions solves ONLY **Authorization**, since it's what's broken in OAuth 2.0 (it just makes it immensely complicated to implement) and what is mostly missing in 2020 (except the Corona Virus vaccine :). 
+SuperAwesome Permissions solves ONLY **Authorization**, since this is what's broken in OAuth 2.0 (i.e it makes it immensely complicated for devs to implement) and what is mostly missing in 2020 (except the Corona Virus vaccine :). 
 
 ## Overview
 
