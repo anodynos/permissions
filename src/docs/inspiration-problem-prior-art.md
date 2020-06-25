@@ -6,9 +6,11 @@ SuperAwesome Permissions can be thought of as a fusion of:
 
 * the widely adopted [RBAC (Role-Based Access Control)](https://en.wikipedia.org/wiki/Role-based_access_control) which tries to simulate the real world of Role Assignments to Users.
 
+* The [New RBAC: Resource-Based Access Control](https://stormpath.com/blog/new-rbac-resource-based-access-control) that explicitly defines the rules that different roles have, focusing on *what* is being protected, not *who* might have an ability. 
+
 * [ABAC (Attribute-Based Access Control)](https://en.wikipedia.org/wiki/Attribute-based_access_control) which allows for detailed policies on resources, including which actions can be performed on which resource's attributes, by different roles.
 
-* others such as *User Based Access control*, *Rule-based Access Control* and even *Time-based Access Control* can easily be programmed through the extensible ownership hooks.
+* others such as *User Based Access control*, *Rule-based Access Control* and even *Time-based Access Control* can easily be simulated through the extensible ownership hooks.
 
 ## The Problem
 
